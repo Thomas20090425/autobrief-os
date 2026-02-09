@@ -1,0 +1,18 @@
+app_name: AutoBrief OS
+sqlite_path: ./autobrief.db
+output_dir: ./output
+collectors:
+  trading:
+    enabled: true
+    source_log_path: ./sample_data/trading.log
+    max_lines: 200
+  system_health:
+    enabled: true
+report:
+  markdown_filename: report.md
+  json_filename: report.json
+telegram:
+  max_chars: 3500
+retry:
+  attempts: 3
+  base_delay_seconds: 0.4

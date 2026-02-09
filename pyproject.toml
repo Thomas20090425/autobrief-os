@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autobrief-os"
+version = "0.1.0"
+description = "AutoBrief OS: modular data collectors + SQLite-backed report generator"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Thomas20090425" }
+]
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+autobrief = "autobrief_os.cli:main"
+
+[tool.setuptools]
+packages = ["autobrief_os", "autobrief_os.collectors"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
